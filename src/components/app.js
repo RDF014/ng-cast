@@ -1,6 +1,9 @@
 angular.module('video-player')
 .controller('appController', function($scope) {
   $scope.videoList = window.exampleVideoData;
+  $scope.onClick = function() {
+
+  };
 })
 .directive('app', function() {
   return {
