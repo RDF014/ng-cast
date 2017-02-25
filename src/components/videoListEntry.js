@@ -6,6 +6,7 @@ angular.module('video-player')
     bindToController: true,
     controller: function($scope) {
       debugger;
+      // props = $scope.video.thumbnails.default.url;
       console.log($scope);
     },
     templateUrl: 'src/templates/videoListEntry.html'
