@@ -8,7 +8,7 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function($scope) {
-      debugger;
+      // debugger;
       // props = $scope.video.thumbnails.default.url;
       console.log($scope);
     },

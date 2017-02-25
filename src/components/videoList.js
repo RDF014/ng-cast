@@ -10,7 +10,7 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function($scope) {
-      debugger;
+      // debugger;
       // $scope.videoList = window.exampleVideoData;
       console.log($scope);
     },
