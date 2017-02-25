@@ -52,6 +52,7 @@ describe('video player', function() {
 
   it('should dynamically compute the youtube url', function() {
     // Testing both cat element and js video element
+    debugger;
     expect(catElement.find('iframe').first().attr('src')).to.contain(`https://www.youtube.com/embed/${fakeVideoData[0].id.videoId}`);
     expect(jsElement.find('iframe').first().attr('src')).to.contain(`https://www.youtube.com/embed/${moreFakeVideoData[0].id.videoId}`);
   });

@@ -1,9 +1,9 @@
 <div class="video-player">
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" ng-src="{{ctrl.getSource(ctrl.video.id.videoId)}}" allowFullScreen></iframe>
+    <iframe class="embed-responsive-item" src="{{ctrl.getSource(ctrl.video.id.videoId)}}" allowFullScreen autostart="false"></iframe>
   </div>
   <div class="video-player-details">
-    <h3>Video Title</h3>
-    <div>Video Description</div>
+    <h3>{{ctrl.video.snippet.title}}</h3>
+    <div>{{ctrl.video.snippet.description}}</div>
   </div>
 </div>

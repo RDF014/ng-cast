@@ -5,7 +5,8 @@ angular.module('video-player')
     // TODO
     scope: {
       video: '<',
-      getSource: '<'
+      getSource: '<',
+      url: '<'
     },
     controllerAs: 'ctrl',
     bindToController: true,
