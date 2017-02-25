@@ -1,15 +1,10 @@
 angular.module('video-player')
 .controller('appController', function($scope) {
   $scope.videoList = window.exampleVideoData;
-  $scope.currentVideo = window.exampleVideoData[0].id.videoId;
+  $scope.currentVideo = window.exampleVideoData[0];
 
   $scope.onClick = function() {
   };
-  $scope.getSource = function(videoId) {
-    return 'https://www.youtube.com/embed/' + videoId;
-  };
-  $scope.url = 'https://www.youtube.com/embed/' + $scope.$currentVideo; 
-  debugger;
 })
 .directive('app', function() {
   return {
