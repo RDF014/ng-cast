@@ -2,7 +2,10 @@ angular.module('video-player')
 .directive('videoListEntry', function() {
   return {
     // TODO
-    controllerAs: 'props',
+    scope: {
+      video: '<'
+    },
+    controllerAs: 'ctrl',
     bindToController: true,
     controller: function($scope) {
       debugger;

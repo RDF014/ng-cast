@@ -1,12 +1,12 @@
 angular.module('video-player')
-
+.controller('appController', function($scope) {
+  $scope.videoList = window.exampleVideoData;
+})
 .directive('app', function() {
-
   return {
-    controllerAs: 'props',
-    bindToController: true,
+    // controllerAs: 'ctrl',
+    // bindToController: true,
     controller: function($scope) {
-      $scope.videoList = window.exampleVideoData;
       debugger;
       console.log($scope);
     },
