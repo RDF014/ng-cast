@@ -20,16 +20,33 @@ angular.module('video-player')
     },
     controllerAs: 'ctrl',
     bindToController: true,
-    controller: function($scope) {
-      this.currentVideo = window.exampleVideoData[0];
+    controller: function($scope, youTube) {
       this.videos = window.exampleVideoData;
+      this.currentVideo = this.videos[0];
+      var self = this;
       this.selectVideo = function(obj) {
         // console.log('click');
         // debugger;
         this.currentVideo = obj;
         // console.log(this.currentVideo);
       }.bind(this);
-      this.searchResults = function() {};
+      this.searchResults = function(searchTerm) {
+        console.log('click');
+        // debugger;
+        var options = {
+          query: searchTerm,
+          key: window.YOUTUBE_API_KEY,
+          maxResults: 5
+        };
+        youTube.search(options, function(response) {
+          // debugger;
+          // this.videos = [];
+          // this.videos.push(response.data.items);
+          debugger;
+          self.videos = response.data.items;
+          // self.videos = response.data.items ? response.data.items : response;
+        });
+      };
       // debugger;
 
       // this.selectVideo = function(obj) {
@@ -37,6 +54,7 @@ angular.module('video-player')
       //   $scope.currentVideo = obj;
       // };
       console.log($scope);
+      this.searchResults('dog');
     },
     templateUrl: 'src/templates/app.html'
   };
