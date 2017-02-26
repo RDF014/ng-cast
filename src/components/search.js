@@ -9,10 +9,11 @@ angular.module('video-player')
       service: '<'
     },
     controller: function($scope) {
-      console.log($scope);
-      this.onClick = function() {
-        this.service.search({}, function() {});
-        this.result(this.searchTerm);
+      // console.log($scope);
+      this.onClick = () => {
+        this.service.search(this.searchTerm, (data) => {
+          this.result(this.searchTerm);   
+        });
       };
     },
     controllerAs: 'ctrl',
