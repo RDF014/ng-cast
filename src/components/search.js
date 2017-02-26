@@ -10,6 +10,10 @@ angular.module('video-player')
     },
     controller: function($scope) {
       console.log($scope);
+      this.onClick = function() {
+        this.service.search({}, function() {});
+        this.result(this.searchTerm);
+      };
     },
     controllerAs: 'ctrl',
     bindToController: true,
