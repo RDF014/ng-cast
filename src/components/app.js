@@ -42,17 +42,17 @@ angular.module('video-player')
           // debugger;
           // this.videos = [];
           // this.videos.push(response.data.items);
-          debugger;
-          self.videos = response.data.items;
+          // debugger;
+          // console.log(response);
+          if (response.data === undefined) {
+            self.videos = response;
+          } else {
+            self.videos = response.data.items;
+          }
+          self.currentVideo = self.videos[0];
           // self.videos = response.data.items ? response.data.items : response;
         });
       };
-      // debugger;
-
-      // this.selectVideo = function(obj) {
-      //   console.log('click');
-      //   $scope.currentVideo = obj;
-      // };
       console.log($scope);
       this.searchResults('dog');
     },
