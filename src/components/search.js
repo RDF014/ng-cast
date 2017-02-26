@@ -5,7 +5,8 @@ angular.module('video-player')
     // TODO
     scope: {
       result: '<',
-      searchTerm: '<'
+      searchTerm: '<',
+      service: '<'
     },
     controller: function($scope) {
       console.log($scope);

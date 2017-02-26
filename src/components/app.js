@@ -21,6 +21,7 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function($scope, youTube) {
+      this.search = youTube;
       this.videos = window.exampleVideoData;
       this.currentVideo = this.videos[0];
       var self = this;
